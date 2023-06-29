@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f2f2f2;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'monospace';
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 3px;
+    gap: 5%;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    animation: rotate 6s infinite;
+    /* background: black; */
+    margin: 10px;
+}
+
+.circle {
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+}
+
+.circle.red {
+    background: #F63D3A;
+    animation: circle1 1.5s infinite;
+}
+
+.circle.green {
+    background: #19A68C;
+    animation: circle2 1.5s infinite;
+}
+
+
+.circle.yellow {
+    background: #FDA543;
+    animation: circle3 1.5s infinite;
+
+}
+
+.circle.black {
+    background: #193B48;
+    animation: circle4 1.5s infinite;
+}
+
+/* keyframes */
+
+@keyframes circle1 {
+    0% {
+        transform: translate(0);
+    }
+
+    70% {
+        transform: translate(15%, 15%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        transform: translate(0);
+    }
+
+    70% {
+        transform: translate(-15%, 15%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes circle3 {
+    0% {
+        transform: translate(0);
+    }
+
+    70% {
+        transform: translate(15%, -15%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes circle4 {
+    0% {
+        transform: translate(0);
+    }
+
+    70% {
+        transform: translate(-15%, -15%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes rotate {
+    30% {
+        transform: rotate(120deg);
+    }
+
+    50% {
+        transform: rotate(300deg);
+    }
+
+    70% {
+        transform: rotate(400deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
